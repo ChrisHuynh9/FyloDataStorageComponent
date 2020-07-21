@@ -1,0 +1,217 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+body {
+  font-family: "Raleway";
+  font-size: 14px;
+  background: url(./images/bg-desktop.svg) center/cover fixed no-repeat;
+}
+
+.mobile {
+  background: url(./images/bg-mobile.svg) center/cover fixed no-repeat;
+}
+
+/* docoument icon */
+.document {
+  position: relative;
+  right: 455px;
+  top: 70px;
+}
+
+.square {
+  height:45px;
+  width: 45px;
+  background-color: hsl(229, 57%, 11%);
+  border-radius: 15px;
+  position: relative;
+  left: 211px;
+  top: 338px;
+  
+}
+
+/* folder icon */
+.folder {
+  position: relative;
+  right: 424px;
+  top: 70px;
+}
+
+.square2 {
+  height:45px;
+  width: 45px;
+  background-color: hsl(229, 57%, 11%);
+  border-radius: 15px;
+  position: relative;
+  left: 268px;
+  top: 293px;
+  
+}
+
+/* upload icon */
+
+.square3 {
+  height:45px;
+  width: 45px;
+  background-color: hsl(229, 57%, 11%);
+  border-radius: 15px;
+  position: relative;
+  left: 325px;
+  top: 249px;
+}
+
+.upload {
+  position: relative;
+  right: 205px;
+  top: 34px;
+}
+
+/* small container */
+.small-container {
+  height: 200px;
+  width: 320px;
+  background-color: hsl(228, 56%, 26%);
+  border-radius: 10px;
+  border-top-right-radius: 100px;
+  position: relative;
+  left: 160px;
+  top: 90px;
+  z-index: -1;
+}
+
+/* big container */
+.big-container {
+  width: 600px;
+  height: 140px;
+  background-color: hsl(228, 56%, 26%);
+  border-radius: 10px;
+  position: relative;
+  left: 510px;
+  bottom: 50px;
+}
+
+/* 185 GB left */
+.data-remaining{
+  position: relative;
+  width: 70%;
+  height: 30%;
+  background: white;
+  border-radius: 0.5rem;
+  text-align: center;
+  left: 390px;
+  bottom: 100px;
+}
+
+.data-remaining  p{
+  padding: 0.7rem;
+  font-weight:700;
+  font-size: 1.5rem;
+  color: hsl(229, 57%, 11%);
+}
+
+.data-remaining span{
+  color: hsl(229, 7%, 55%);
+  font: 400;
+  font-size: 14px;
+}
+
+.triangle { 
+  border-bottom: 30px solid transparent;
+  border-left: 30px solid white;
+  position: relative;
+  left: 415px;
+  bottom: 25px;
+  transform: rotate(90deg);
+}
+
+
+
+
+
+/* You've used 815 GB of your storage */
+.used-storage {
+  position: relative;
+  font-size: 14px;
+  white-space: nowrap;
+  color: #ffffff;
+  bottom: 115px;
+  
+}
+
+
+.thebody {
+  width:200px; 
+            height:200px; 
+            position: fixed;  
+            top: 50%; 
+            left: 50%; 
+            margin-top: -100px; 
+            margin-left: -100px; 
+}
+
+
+/* fylo logo */
+.logo {
+  position: relative;
+  right: 329px;
+}
+
+
+/* 0GB 1000GB */
+.progress-bar-num {
+  position: relative;
+  display: inline-flex; 
+  font-size: 14px;
+  color: white;
+  bottom: 60px;
+}
+
+/* fav icon */
+.favicon {
+  position: relative;
+  top: 360px;
+  left: 20px;
+}
+
+/* outter shell of progress bar */
+.progress-outter{
+  width: 265%;
+  height: 23px;
+  background: hsl(229, 57%, 11%);
+  border-radius: 1rem;
+  position: relative;
+  z-index: 4;
+  bottom: 127px;
+  right: 3px;
+}
+
+/* progress bar */
+.progress{
+  width: 200%;
+  height: 15px;
+  background:linear-gradient(to right, hsl(6, 100%, 80%), hsl(335, 100%, 65%));
+  border-radius: 1rem;
+  position: relative;
+  bottom: 108px;
+  z-index: 5;
+}
+
+.progress::after{
+  content:'';
+  position: absolute;
+  left: 96.5%;
+  background:#ffffff;
+  top: 6.5%;
+  width: 12px;
+  height:14px;
+  border-radius: 100%;
+  z-index: 5;
+}
+
+@media screen and (min-width:768px) {
+  .header {
+      background: url(./images/bg-desktop.svg) center/cover no-repeat fixed;
+}
