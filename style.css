@@ -4,214 +4,226 @@
   box-sizing: border-box;
 }
 
-
 body {
   font-family: "Raleway";
   font-size: 14px;
-  background: url(./images/bg-desktop.svg) center/cover fixed no-repeat;
 }
 
-.mobile {
-  background: url(./images/bg-mobile.svg) center/cover fixed no-repeat;
+.main-container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
 }
 
-/* docoument icon */
-.document {
+.first-container {
+  background: hsl(228, 56%, 26%);
+  margin-bottom: 1rem;
+  border-radius: 0.5rem 6rem 0.5rem 0.5rem;
+}
+
+.logo {
+  padding: 2rem 2rem 1.5rem 2rem;
+}
+
+.icons {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 0 2rem 2rem;
+}
+
+.icon {
+  margin-right: 1rem;
+  width: 35px;
+  height: 35px;
+  background: hsl(229, 57%, 11%);
+  text-align: center;
+  overflow: hidden;
   position: relative;
-  right: 455px;
-  top: 70px;
+  border-radius: 20%;
 }
 
-.square {
-  height:45px;
-  width: 45px;
-  background-color: hsl(229, 57%, 11%);
-  border-radius: 15px;
-  position: relative;
-  left: 211px;
-  top: 338px;
-  
+.icon img {
+  display: inline-block;
+  position: absolute;
+  top: 25%;
+  left: 25%;
+  transform: translate(-50% -50%);
+  width: 18px;
+  height: 18px;
 }
 
-/* folder icon */
-.folder {
+.second-container {
+  background: hsl(228, 56%, 26%);
   position: relative;
-  right: 424px;
-  top: 70px;
+  text-align: center;
+  border-radius: 0.5rem 0.5rem;
 }
 
-.square2 {
-  height:45px;
-  width: 45px;
-  background-color: hsl(229, 57%, 11%);
-  border-radius: 15px;
-  position: relative;
-  left: 268px;
-  top: 293px;
-  
+.storage-info {
+  padding-top: 1.2rem;
+  color: hsl(229, 7%, 55%);
+  font-weight: 400;
 }
 
-/* upload icon */
-
-.square3 {
-  height:45px;
-  width: 45px;
-  background-color: hsl(229, 57%, 11%);
-  border-radius: 15px;
-  position: relative;
-  left: 325px;
-  top: 249px;
+.progress-bar {
+  width: 70;
+  height: 16px;
+  background: black;
+  margin: 1rem 3.3rem 0.7rem 3.3rem;
 }
 
-.upload {
+.progress {
+  width: 75%;
+  height: 15px;
+  background: linear-gradient(to right, hsl(6, 100%, 80%), hsl(335, 100%, 65%));
+  border-radius: 1rem;
   position: relative;
-  right: 205px;
-  top: 34px;
 }
 
-/* small container */
-.small-container {
-  height: 200px;
-  width: 320px;
-  background-color: hsl(228, 56%, 26%);
-  border-radius: 10px;
-  border-top-right-radius: 100px;
-  position: relative;
-  left: 160px;
-  top: 90px;
-  z-index: -1;
-}
-
-/* big container */
-.big-container {
-  width: 600px;
-  height: 140px;
-  background-color: hsl(228, 56%, 26%);
-  border-radius: 10px;
-  position: relative;
-  left: 510px;
-  bottom: 50px;
-}
-
-/* 185 GB left */
-.data-remaining{
-  position: relative;
-  width: 70%;
-  height: 30%;
+.progress::after {
+  content: '';
+  position: absolute;
+  left: 92%;
   background: white;
+  top: 0%;
+  width: 12px;
+  height: 14px;
+  border-radius: 100%;
+}
+
+.data-size {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 3.2rem;
+  color: white;
+}
+
+.data-remaining {
+  position: absolute;
+  width: 40%;
+  height: 40%;
+  background: white;
+  left: 32%;
+  top: 80%;
   border-radius: 0.5rem;
   text-align: center;
-  left: 390px;
-  bottom: 100px;
 }
 
-.data-remaining  p{
+.data-remaining p {
   padding: 0.7rem;
-  font-weight:700;
+  font-weight: 700;
   font-size: 1.5rem;
-  color: hsl(229, 57%, 11%);
 }
 
-.data-remaining span{
+.data-remaining span {
   color: hsl(229, 7%, 55%);
-  font: 400;
+  font-weight: 400;
   font-size: 14px;
 }
 
-.triangle { 
-  border-bottom: 30px solid transparent;
-  border-left: 30px solid white;
-  position: relative;
-  left: 415px;
-  bottom: 25px;
-  transform: rotate(90deg);
+/* DESKTOP MEDIA QUERY */
+@media screen and (max-width: 1441px) {
+  body {
+    background: url(./images/bg-desktop.svg) center/cover no-repeat fixed;
+  } 
+
+.main-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-column-gap: 2rem;
+  padding-top: 20%;
+  padding-left: 4%;
 }
 
-
-
-
-
-/* You've used 815 GB of your storage */
-.used-storage {
-  position: relative;
-  font-size: 14px;
-  white-space: nowrap;
-  color: #ffffff;
-  bottom: 115px;
-  
+.first-container{
+  width: 75%;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 6rem;
+  margin-top: 1rem;
 }
 
-
-.thebody {
-  width:200px; 
-            height:200px; 
-            position: fixed;  
-            top: 50%; 
-            left: 50%; 
-            margin-top: -100px; 
-            margin-left: -100px; 
+.second-container{
+  margin-right: 8rem;
+  height:60% ;
+  margin-top: 4rem;
+  width: 700px;
+  position: relative;
 }
 
-
-/* fylo logo */
-.logo {
-  position: relative;
-  right: 329px;
-}
-
-
-/* 0GB 1000GB */
-.progress-bar-num {
-  position: relative;
-  display: inline-flex; 
-  font-size: 14px;
-  color: white;
-  bottom: 60px;
-}
-
-/* fav icon */
-.favicon {
-  position: relative;
-  top: 360px;
-  left: 20px;
-}
-
-/* outter shell of progress bar */
-.progress-outter{
-  width: 265%;
-  height: 23px;
-  background: hsl(229, 57%, 11%);
-  border-radius: 1rem;
-  position: relative;
-  z-index: 4;
-  bottom: 127px;
-  right: 3px;
-}
-
-/* progress bar */
-.progress{
-  width: 200%;
-  height: 15px;
-  background:linear-gradient(to right, hsl(6, 100%, 80%), hsl(335, 100%, 65%));
-  border-radius: 1rem;
-  position: relative;
-  bottom: 108px;
-  z-index: 5;
+.storage-info{
+  padding-top: 2rem;
+  text-align: left;
+  margin-left: 3rem;
 }
 
 .progress::after{
-  content:'';
-  position: absolute;
-  left: 96.5%;
-  background:#ffffff;
-  top: 6.5%;
-  width: 12px;
-  height:14px;
-  border-radius: 100%;
-  z-index: 5;
+  margin-left: 3%;
 }
 
-@media screen and (min-width:768px) {
-  .header {
-      background: url(./images/bg-desktop.svg) center/cover no-repeat fixed;
+.data-remaining{
+background: white;
+border-radius: 10px 10px 0px 10px;
+color: black;
+display: flex;
+height: 70px;
+position: relative;
+top: -105%;
+width: 140px;
+left: 72%;
+}
+
+.data-remaining::after{
+  border: 20px solid transparent;
+  border-top-color: #fff;
+  border-bottom: 0;
+  border-right: 0;
+  bottom: 0;
+  content: "";
+  position: absolute;
+  left: 86%;
+  margin-bottom: -20px;
+}
+
+
+}
+
+/* MOBILE MEDIA QUERY */
+@media screen and (max-width: 500px) {
+  body {
+    background: url(./images/bg-mobile.svg) center/cover no-repeat fixed;
+  }
+
+.main-container {
+    display: grid;
+    grid-column-gap: 2rem;
+    padding-top: 20%;
+    padding-left: 4%;
+  }
+
+.first-container{
+    width: 100%;
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 1rem;
+    margin-top: 1rem;
+  }
+
+.second-container{
+    margin-left: 1rem;
+    height:60% ;
+    margin-top: 2.5rem;
+    width: 250px;
+    position: relative;
+  }
+
+
+
+
+
+  
 }
